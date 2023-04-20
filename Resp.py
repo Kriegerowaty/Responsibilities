@@ -191,7 +191,7 @@ if __name__ == '__main__':
             # Tutaj, powinno w 20 wierszu pokazywać czy znalazł duplikat
             if ws[row][col].value == ws[row][col - 1].value and \
                     len(str(ws[row][col].value)) > 1 and ws[row][col].value != 'w!':
-                ws[20][col].value = 'DUPA'
+                ws[20][col].value = 'Duplikat'
                 ws[21][col].value = ws[row][col].coordinate
 
             # Zamień te zmiany które dostały puste na int. Inaczej w excelu komorki wskazują błąd
@@ -199,7 +199,7 @@ if __name__ == '__main__':
                     and ws[row][col].value != '\xa0' and ws[row][col].value is not None:
                 ws[row][col].value = int(ws[row][col].value)
 
-                # ws[19][b].value = 'DUPA'
+                # ws[19][b].value = 'Duplikat'
             row = row + 1
         col = col + 1
 
